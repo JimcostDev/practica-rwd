@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css?family=Handlee|Lato|Raleway");
+@import url(menu.css); /*vincular los estilos de menu a la hoja de estilos principal*/
+@import url(banner.css);
+@import url(cursos.css);
+@import url(info.css);
+/*#F39B53 */
+* {
+  /*quitar margenes inferiores como exteriores a toda la pagina*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*margenes dentro del mismo modelo de caja y no se expanda*/
+}
+body {
+  font-family: "Handlee", sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 50px;
+  background-color: #0a0a2a;
+  color: #fff;
+
+  /*dejar el header pegado*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100; /*que este por encima de oros elementos*/
+}
+.contenedor {
+  width: 98%;
+  margin: auto;
+}
+h1 {
+  float: left; /*flotar a la izquierda*/
+}
+header .contenedor {
+  /*limpiar contenedor*/
+  display: table;
+}
+
+section {
+  /*si hay contenido abajo lo empuje*/
+  width: 100%;
+  margin-bottom: 25px;
+}
+#JimcostDev {
+  text-align: center;
+}
+
+footer .contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 25px;
+}
+.copy {
+  font-size: 20px;
+}
+.sociales {
+  width: 100%;
+  text-align: center;
+  font-size: 28px;
+}
+
+.sociales a {
+  color: #0a0a2a;
+  text-decoration: none;
+}
+/*apartir de table*/
+@media (min-width: 768px) {
+  .sociales {
+    width: auto;
+  }
+  footer .contenedor {
+    justify-content: space-between; /*que cada elemento se ponga en un extremo*/
+  }
+}
+
+/*apartir de web*/
+@media (min-width: 1204px) {
+  .contenedor {
+    width: 1000px;
+  }
+}

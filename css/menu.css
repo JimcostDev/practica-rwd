@@ -1,0 +1,71 @@
+#menu-bar
+{
+    display: none;/*esconder menu*/
+}
+header label 
+{
+    float: right;/*flotar a la derecha*/
+    font-size: 25px;
+    margin: 6px 0;
+    cursor: pointer;/*manito*/
+}
+.menu
+{
+    position: absolute;
+    width: 100%;
+    height: 100vh;/*ocupar el alto de la ventana*/
+    background: rgba(3, 36, 73, 0.7);
+    top: 50px;;
+    left: 0;
+    transition: all 0.5s;
+    transform: translateX(-100%);/*esconder hacia la izquierda*/
+    
+}
+.menu a 
+{
+    text-decoration: none;
+    display: block;
+    color: #fff;
+    height: 50px;;
+    padding: 15px;
+    border-bottom: 1px solid rgba(94, 174, 221, 0.5);
+}
+.menu a:hover
+{
+    background: rgba(47, 67, 85, 0.397);
+}
+
+/*mostrar el menu  cuando este actvio el check*/
+#menu-bar:checked ~ .menu 
+{
+    transform: translateX(0%);
+}
+.visible{
+    display: block; /*ocultar icono en web*/
+}
+
+/*Responsive Web Desing*/
+@media(min-width:760px)
+{
+    .visible{
+        display: none;/*mostrar icono en movil*/
+    }
+    .menu
+    {
+        position: static;
+        width: auto;
+        height: auto;
+        transform: translateX(0%);
+        float: right;
+        display: flex;
+        background:#0A0A2A;
+    }
+    .menu a
+    {
+        border: none;
+    }
+    header label
+    {
+        display: none;
+    }
+}
